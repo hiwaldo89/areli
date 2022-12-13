@@ -1,0 +1,17 @@
+---
+import classnames from 'classnames';
+
+export interface Props {
+	href: string;
+	text: string;
+	isActive: boolean;
+}
+
+const { href, text, isActive } = Astro.props
+---
+
+<li class={classnames("ml-10 first:ml-0 hover:text-yellow transition ease-in-out duration-300", {"text-yellow": isActive})}>
+	<a href={href} class={classnames("uppercase", {"font-bold": isActive, "font-medium": !isActive})}>
+		{text}
+	</a>
+</li>

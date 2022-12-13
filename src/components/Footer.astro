@@ -1,0 +1,29 @@
+---
+import globalData from '../data/global';
+import Linkedin from './Linkedin.astro';
+
+const { menuItems } = globalData;
+---
+
+<footer>
+    <div class="container mx-auto">
+        <div class="border-t border-t-gray pt-12 pb-16">
+            <h4 class="uppercase font-bold mb-16">Areli Velázquez</h4>
+            {
+                menuItems.map((link) => (
+                    <div class="mb-4">
+                        <a
+                            href={link.href}
+                            class="uppercase font-medium hover:text-yellow transition duration-300 ease-in-out"
+                        >
+                            {link.text}
+                        </a>
+                    </div>
+                ))
+            }
+            <div>
+                <Linkedin />
+            </div>
+        </div>
+    </div>
+</footer>

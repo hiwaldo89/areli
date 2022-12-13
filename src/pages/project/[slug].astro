@@ -1,0 +1,137 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import projects from '../../data/projects';
+
+interface ITwoColText {
+    type: 'two-col-text';
+    columns: { title: string; content: string }[];
+}
+
+interface IImage {
+    type: 'image';
+    src: string;
+    alt: string;
+}
+
+interface ITitleAndText {
+    type: 'title-and-text';
+    title: string;
+    text: string;
+}
+
+interface ITextAndImage {
+    type: 'text-and-image';
+    title: string;
+    text: string;
+    image: {
+        src: string;
+        alt: string;
+    };
+}
+
+interface IText {
+    type: 'text';
+    content: string;
+}
+
+export interface Props {
+    title: string;
+    categories: string[];
+    website: string;
+    content: Array<ITwoColText | IImage | ITitleAndText | ITextAndImage | IText>;
+}
+
+export function getStaticPaths() {
+    return projects.map((project) => {
+        const { slug, ...props } = project;
+        return {
+            params: { slug },
+            props,
+        };
+    });
+}
+
+const { title, categories, website, content } = Astro.props;
+---
+
+<Layout title={title}>
+    <main class="mt-16 container mx-auto">
+        <a href="/" class="text-gray block hover:opacity-30 transition ease-in-out duration-300"
+            >&lsaquo; Back to projects</a
+        >
+        <div class="flex items-center mt-36 mb-8">
+            <h1 class="text-5xl">{title}</h1>
+            <ul class="flex ml-auto">
+                {
+                    categories.map((category) => (
+                        <li class="mr-8 last:mr-0 rounded-full py-4 px-5 text-sm min-w-[80px] bg-yellow">{category}</li>
+                    ))
+                }
+            </ul>
+        </div>
+        <a
+            href={website}
+            class="uppercase text-lg border-b border-b-gray mb-56 inline-block hover:text-yellow transition duration-300 ease-in-out hover:border-b-yellow"
+            target="_blank">Visit website</a
+        >
+        {
+            content.map((section) => {
+                if (section.type === 'two-col-text') {
+                    return (
+                        <section class="columns-2 gap-8 mb-24">
+                            {section.columns.map((column) => (
+                                <div>
+                                    <h2 class="text-4xl mb-4">{column.title}</h2>
+                                    <p class="text-xl">{column.content}</p>
+                                </div>
+                            ))}
+                        </section>
+                    );
+                }
+
+                if (section.type === 'image') {
+                    return (
+                        <section class="mb-24">
+                            <img src={section.src} alt={section.alt} class="mx-auto max-w-full" />
+                        </section>
+                    );
+                }
+
+                if (section.type === 'title-and-text') {
+                    return (
+                        <section class="flex mb-24">
+                            <div class="lg:w-4/12">
+                                <h2 class="text-4xl">{section.title}</h2>
+                            </div>
+                            <div class="lg:w-8/12">
+                                <p class="text-xl">{section.text}</p>
+                            </div>
+                        </section>
+                    );
+                }
+
+                if (section.type === 'text-and-image') {
+                    return (
+                        <section class="flex mb-24 items-center gap-24">
+                            <div class="lg:w-6/12">
+                                <h2 class="text-4xl mb-4">{section.title}</h2>
+                                <p class="text-xl">{section.text}</p>
+                            </div>
+                            <div class="lg:w-6/12">
+                                <img src={section.image.src} alt={section.image.alt} class="max-w-full mx-auto" />
+                            </div>
+                        </section>
+                    );
+                }
+
+                if (section.type === 'text') {
+                    return (
+                        <section class="mb-24">
+                            <p class="text-xl" set:html={section.content} />
+                        </section>
+                    );
+                }
+            })
+        }
+    </main>
+</Layout>

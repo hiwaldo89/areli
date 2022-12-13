@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ProjectList from '../components/ProjectList/ProjectList';
+import AboutSection from '../components/AboutSection';
+import globalData from '../data/global';
+import projectsData from '../data/projects';
+
+const { projectFilters } = globalData;
+const projects = projectsData.map((project) => ({
+    url: `/project/${project.slug}`,
+    title: project.title,
+    img: project.cover,
+    category: project.categories[0],
+}));
+---
+
+<Layout title="Welcome to Astro.">
+    <main class="container mx-auto mt-56">
+        <p class="text-6xl lg:w-8/12 leading-normal mb-56">
+            Hi there! My name is Areli and I’m a UX&nbsp;/&nbsp;UI&nbsp;Designer
+        </p>
+        <div id="portfolio"><ProjectList filters={projectFilters} projects={projects} client:visible /></div>
+        <AboutSection client:load />
+    </main>
+</Layout>

@@ -1,0 +1,14 @@
+---
+const { default: innerHTML } = await import('/src/images/linkedin.svg?raw');
+---
+
+<a href="https://www.linkedin.com/in/ux-arelivelazquez/" target="_blank" set:html={innerHTML} class="linkedin" />
+
+<style>
+	.linkedin :global(svg path) {
+		transition: all 0.3s ease-in-out;
+	}
+	.linkedin:hover :global(svg path) {
+		fill: theme(colors.yellow);
+	}
+</style>
