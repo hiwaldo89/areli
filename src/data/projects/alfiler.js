@@ -12,7 +12,7 @@ export default {
             type: 'two-col-text',
             columns: [
                 {
-                    title: 'Summary',
+                    title: 'Overview',
                     content:
                         'Alfiler is a Branding Studio located in Queretaro, Mexico. They were looking for a new website that could be faithful to their brand.',
                 },
@@ -33,8 +33,6 @@ export default {
             src: '/images/alfiler-wireframes.png',
             alt: '',
         },
-        
-    
         {
             type: 'text-and-image',
             title: 'The Challenge',
@@ -44,12 +42,6 @@ export default {
                 alt: '',
             },
         },
-        {
-            type: 'image',
-            src: '/images/alfiler-wireframes3.png',
-            alt: '',
-        },
-        
         {
             type: 'text',
             content: `<h2>Qualitative research.</h2> <br />
@@ -71,39 +63,25 @@ export default {
             - Keep website consistent and on brand.
             <br />
             - Guide them through best practices for them to keep it running smoothly.
-            <br />
-            <br />
-            <h2>Design Process.</h2>
-            <br />
-            I started by mapping out all the information I had from research and started sketching and iterating. I like to set a time and sketch all the ideas  in my head, take a break and then come back and see what is working and what is not.
-            <br />
-            After some iteration, I went to Figma and did some wireframing and lo-fi prototyping to present a first proof to the company. Then, took their feedback and went back for some more iteration.
-            <br />
-            <br />
-            <h2>Visual System and Design Decisions.</h2>
-            <br />
-            Alfiler's color palette has only two colors: black and white. I wanted to keep everything monochromatic but still have hints of color within a white spectrum for photography.
-            For the visual system, I put together colors, typography, buttons, iconography, and cards.
-            Some of the design decisions I took were:
-            <br />
-            - Use the pin head as the pointer in the website and make it grow to become the button with a project area.
-            <br />
-            - Drop some easter eggs like the one on the home page where hovering over the branding word you get the studio's own definition.
-            <br />
-            - For the individual project page, I designed blocks of content that could potentitially move around, and that way they could decide which blocks they wanted to use for each project so that each of the could be unique.
-            <br />
-            - Since they didn't want a contact form, I had to reconsider the original navigation and went ahead with a chat instead.
-            <br />
-            - Designed some interactions and animations to provide instant feedback and help the users know their actions will do what they expect them to do.
-            <br />
-            <br />
-            
-            <h2>Coding, creating content for setup and launch.</h2>
-            <br />
-            Once we went into the coding stage, I worked very closely with the developer to make sure the outcome was as expected and that the little details were kept through design, navigation and interactions.
-            We decided to have Prismic as the CMS as it is super simple to use. Once this stage was ready, I created the visual content we needed and set it up.
-            `
+            <br />`
+        },
 
+
+        {
+            type: 'image',
+            src: '/images/alfiler-wireframes3.png',
+            alt: '',
+        },
+
+        {
+            type: 'text-and-image',
+            title: 'Design Process',
+            text: `I started by mapping out all the information I had from research and started sketching and iterating. I like to set a time and sketch all the ideas in my head, take a break and then come back and see what is working and what is not.
+            After some iteration, I went to Figma and did some wireframing and lo-fi prototyping to present a first proof to the company. Then, took their feedback and went back for some more iteration.`,
+            image: {
+                src: '/images/alfiler-ni-02.jpg',
+                alt: '',
+            },
         },
         {
             type: 'text-and-image',
@@ -128,6 +106,15 @@ export default {
                 src: '/images/alfiler-ni-01.jpg',
                 alt: '',
             },
+        },
+        {
+            type: 'text',
+            content: `<h2>Coding, creating content for setup and launch.</h2> <br />
+                I started by mapping out all the information I had from research and started sketching and iterating. I like to set a time and sketch all the ideas  in my head, take a break and then come back and see what is working and what is not.
+                <br />
+                Once we went into the coding stage, I worked very closely with the developer to make sure the outcome was as expected and that the little details were kept through design, navigation and interactions.
+                We decided to have Prismic as the CMS as it is super simple to use. Once this stage was ready, I created the visual content we needed and set it up.
+                `
         },
         {
             type: 'text-and-image',
