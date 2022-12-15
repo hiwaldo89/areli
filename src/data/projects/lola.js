@@ -2,7 +2,7 @@ export default {
     slug: 'lola-trending-shoes',
     title: 'Lola Trending Shoes',
     categories: ['Ecommerce'],
-    website: '/https://lolatrendingshoes.com/',
+    website: 'https://lolatrendingshoes.com/',
     cover: {
         src: '/images/Lola-1.jpg',
         alt: '',

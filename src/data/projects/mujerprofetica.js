@@ -2,7 +2,7 @@ export default {
     slug: 'mujer-profetica',
     title: 'Mujer Profetica',
     categories: ['Ecommerce'],
-    website: '/https://mujerprofetica.com/',
+    website: 'https://mujerprofetica.com/',
     cover: {
         src: '/images/Mujer-Profetica-02.jpg',
         alt: '',

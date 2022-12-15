@@ -2,7 +2,7 @@ export default {
     slug: 'rosella-magazine',
     title: 'Rosella Magazine',
     categories: ['Web Design'],
-    website: '/https://rosellamagazine.com/',
+    website: 'https://rosellamagazine.com/',
     cover: {
         src: '/images/RosellaMagazine-6.jpg',
         alt: '',

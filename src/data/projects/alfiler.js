@@ -2,7 +2,7 @@ export default {
     slug: 'alfiler-studio',
     title: 'Alfiler Studio',
     categories: ['Web Design'],
-    website: '/https://alfilerstudio.com/',
+    website: 'https://alfilerstudio.com/',
     cover: {
         src: '/images/Alfiler-4.jpg',
         alt: '',
