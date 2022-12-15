@@ -9,5 +9,5 @@ export default {
             text: 'About',
         },
     ],
-    projectFilters: ['Web Design', 'Ecommerce', 'Emails', 'Other'],
+    projectFilters: ['Web Design', 'Ecommerce'],
 };

@@ -17,12 +17,15 @@ const AboutSection = () => {
                 <div className="lg:w-5/12">
                     <h2 className="text-5xl mb-16">About me</h2>
                     <p>
-                        Brownie liquorice jelly-o topping sugar plum toffee topping chupa chups. Candy canes marzipan
-                        candy tart carrot cake powder sugar plum chocolate jelly beans
+                        I'm a UX / UI Designer from Mexico, but relocated on July 2022 to San Jose, California.
+                        I have a Bachelor's Degree on Marketing and Communications and a passion for design, specially User Interfaces.
+                        Two of my favorite hobbies are to watch interior design Youtube videos and take long walks with my dog Uma. 
                     </p>
                 </div>
                 <div className="lg:w-3/12 mx-auto">
-                    <div className="bg-gray w-full aspect-[5/6] rounded-t-[300px] z-10 relative"></div>
+                    <div className="bg-gray w-full aspect-[5/6] rounded-t-[300px] z-10 relative overflow-hidden">
+                        <img src="/images/areli-01.jpg" className="w-full h-full object-cover" />
+                    </div>
                     <motion.div
                         style={{ y, x: '-50%' }}
                         className="w-11/12 rounded-full bg-yellow aspect-square bottom-0 left-0 -z-10"

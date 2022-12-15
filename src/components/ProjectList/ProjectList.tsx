@@ -43,8 +43,7 @@ const ProjectList = ({ filters, projects }: Props) => {
                 </ul>
             </div>
             <p className="lg:w-5/12 text-xl mb-24">
-                Brownie liquorice jelly-o topping sugar plum toffee topping chupa chups. Candy canes marzipan candy tart
-                carrot cake powder sugar plum chocolate jelly beans
+                Here is a sneak peek at the projects I've had the chance to work on. I'm constantly updating my portfolio, so stay tuned for new upcoming projects.
             </p>
             <div className="md:columns-2">
                 <AnimatePresence>

@@ -10,7 +10,7 @@ export default {
     content: [
         {
             type: 'image',
-            src: 'https://source.unsplash.com/random/1',
+            src: '/images/Lola-002.jpg',
             alt: '',
         },
         {

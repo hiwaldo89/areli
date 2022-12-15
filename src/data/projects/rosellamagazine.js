@@ -10,12 +10,22 @@ export default {
     content: [
         {
             type: 'image',
+            src: '/images//RosellaMagazine-6.jpg',
+            alt: '',
+        },
+        {
+            type: 'image',
             src: '/images/rosella-wireframes.png',
             alt: '',
         },
         {
             type: 'image',
             src: '/images/rosella-001.png',
+            alt: '',
+        },
+        {
+            type: 'image',
+            src: '/images/rosella-004.png',
             alt: '',
         },
         {
@@ -26,6 +36,16 @@ export default {
                 src: '/images/RosellaMagazine-8.jpg',
                 alt: '',
             },
+        },
+        {
+            type: 'image',
+            src: '/images/rosella-006.jpg',
+            alt: '',
+        },
+        {
+            type: 'image',
+            src: '/images//RosellaMagazine-1.jpg',
+            alt: '',
         },
     ],
 };

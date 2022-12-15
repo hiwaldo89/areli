@@ -35,6 +35,15 @@ export default {
             },
         },
         {
+            type: 'text-and-image',
+            title: 'Overview',
+            text: 'Brownie liquorice jelly-o topping sugar plum toffee topping chupa chups. Candy canes marzipan candy tart carrot cake powder sugar plum chocolate jelly beans',
+            image: {
+                src: '/images/metagrama-006.jpg',
+                alt: '',
+            },
+        },
+        {
             type: 'image',
             src: '/images/metagrama-02.jpg',
             alt: '',

@@ -115,7 +115,7 @@ const { title, categories, website, content } = Astro.props;
                         <section class="flex mb-24 items-center gap-24">
                             <div class="lg:w-6/12">
                                 <h2 class="text-4xl mb-4">{section.title}</h2>
-                                <p class="text-xl">{section.text}</p>
+                                <div set:html={section.text} />
                             </div>
                             <div class="lg:w-6/12">
                                 <img src={section.image.src} alt={section.image.alt} class="max-w-full mx-auto" />
@@ -126,8 +126,8 @@ const { title, categories, website, content } = Astro.props;
 
                 if (section.type === 'text') {
                     return (
-                        <section class="mb-24">
-                            <p class="text-xl" set:html={section.content} />
+                        <section class="mb-24 text-section">
+                            <div set:html={section.content} />
                         </section>
                     );
                 }
@@ -135,3 +135,9 @@ const { title, categories, website, content } = Astro.props;
         }
     </main>
 </Layout>
+
+<style>
+    .text-section :global(h2) {
+        font-size: theme(fontSize.4xl);
+    }
+</style>

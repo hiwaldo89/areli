@@ -20,8 +20,27 @@ export default {
         },
         {
             type: 'image',
-            src: 'https://source.unsplash.com/random/2',
+            src: '/images/mp-figma-01.jpg',
             alt: '',
+        },
+        {
+            type: 'image',
+            src: '/images/mp-figma-02.png',
+            alt: '',
+        },
+        {
+            type: 'image',
+            src: '/images/Mujer-Profetica-05.jpg',
+            alt: '',
+        },
+        {
+            type: 'text-and-image',
+            title: 'Overview',
+            text: 'Brownie liquorice jelly-o topping sugar plum toffee topping chupa chups. Candy canes marzipan candy tart carrot cake powder sugar plum chocolate jelly beans',
+            image: {
+                src: '/images/mp-figma-02.jpg',
+                alt: '',
+            },
         },
         {
             type: 'text-and-image',
@@ -32,5 +51,6 @@ export default {
                 alt: '',
             },
         },
+       
     ],
 };
