@@ -13,8 +13,8 @@ const AboutSection = () => {
 
     return (
         <>
-            <div id="about" className="flex items-center mt-24">
-                <div className="lg:w-5/12">
+            <div id="about" className="flex flex-wrap items-center mt-24">
+                <div className="md:w-5/12 mb-5 md:mb-0">
                     <h2 className="text-5xl mb-16">About me</h2>
                     <p>
                         I'm a UX / UI Designer from Mexico, but relocated on July 2022 to San Jose, California.
@@ -22,7 +22,7 @@ const AboutSection = () => {
                         Two of my favorite hobbies are to watch interior design Youtube videos and take long walks with my dog Uma. 
                     </p>
                 </div>
-                <div className="lg:w-3/12 mx-auto">
+                <div className="w-7/12 md:w-3/12 mx-auto">
                     <div className="bg-gray w-full aspect-[5/6] rounded-t-[300px] z-10 relative overflow-hidden">
                         <img src="/images/areli-01.jpg" className="w-full h-full object-cover" />
                     </div>

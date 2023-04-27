@@ -54,33 +54,33 @@ export function getStaticPaths() {
 const { title, categories, website, content } = Astro.props;
 ---
 
-<Layout title={title}>
-    <main class="mt-16 container mx-auto">
+<Layout title={`Areli Velazquez | ${title}`}>
+    <main class="mt-16 container mx-auto px-5">
         <a href="/" class="text-gray block hover:opacity-30 transition ease-in-out duration-300"
             >&lsaquo; Back to projects</a
         >
-        <div class="flex items-center mt-36 mb-8">
-            <h1 class="text-5xl">{title}</h1>
-            <ul class="flex ml-auto">
+        <div class="md:flex items-center mt-36 mb-8">
+            <h1 class="mb-5 md:mb-0 text-3xl md:text-5xl">{title}</h1>
+            <ul class="flex flex-wrap ml-auto">
                 {
                     categories.map((category) => (
-                        <li class="mr-8 last:mr-0 rounded-full py-4 px-5 text-sm min-w-[80px] bg-yellow">{category}</li>
+                        <li class="mr-8 last:mr-0 rounded-full py-4 px-5 text-sm min-w-[80px] bg-yellow mb-5 md:mb-0">{category}</li>
                     ))
                 }
             </ul>
         </div>
         <a
             href={website}
-            class="uppercase text-lg border-b border-b-gray mb-56 inline-block hover:text-yellow transition duration-300 ease-in-out hover:border-b-yellow"
+            class="uppercase text-lg border-b border-b-gray mb-16 md:mb-56 inline-block hover:text-yellow transition duration-300 ease-in-out hover:border-b-yellow"
             target="_blank">Visit website</a
         >
         {
             content.map((section) => {
                 if (section.type === 'two-col-text') {
                     return (
-                        <section class="columns-2 gap-8 mb-24">
+                        <section class="md:columns-2 gap-8 mb-24">
                             {section.columns.map((column) => (
-                                <div>
+                                <div class="mb-5 md:mb-0">
                                     <h2 class="text-4xl mb-4">{column.title}</h2>
                                     <p class="text-xl">{column.content}</p>
                                 </div>
@@ -112,12 +112,12 @@ const { title, categories, website, content } = Astro.props;
 
                 if (section.type === 'text-and-image') {
                     return (
-                        <section class="flex mb-24 items-center gap-24">
-                            <div class="lg:w-6/12">
+                        <section class="md:flex mb-24 items-center gap-24">
+                            <div class="w-full md:w-6/12 mb-5 md:mb-0">
                                 <h2 class="text-4xl mb-4">{section.title}</h2>
                                 <div set:html={section.text} />
                             </div>
-                            <div class="lg:w-6/12">
+                            <div class="w-full md:w-6/12">
                                 <img src={section.image.src} alt={section.image.alt} class="max-w-full mx-auto" />
                             </div>
                         </section>

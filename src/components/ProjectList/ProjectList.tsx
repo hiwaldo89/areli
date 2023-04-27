@@ -28,9 +28,9 @@ const ProjectList = ({ filters, projects }: Props) => {
 
     return (
         <>
-            <div className="flex items-center mb-20">
-                <h2 className="font-medium text-2xl">Projects</h2>
-                <ul className="flex ml-auto">
+            <div className="md:flex items-center mb-20">
+                <h2 className="font-medium text-2xl mb-5 md:mb-0">Projects</h2>
+                <ul className="flex flex-wrap ml-auto">
                     <FilterButton filter="All" active={selectedFilter === 'All'} onClick={handleFilterClick} />
                     {filters.map((filter) => (
                         <FilterButton
