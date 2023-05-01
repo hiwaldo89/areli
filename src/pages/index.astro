@@ -1,4 +1,8 @@
 ---
+import { FaWordpressSimple, FaSketch } from 'react-icons/fa';
+import { CgFigma } from 'react-icons/cg';
+import { SiAdobeindesign, SiShopify, SiAdobeillustrator, SiAdobephotoshop } from 'react-icons/si';
+
 import Layout from '../layouts/Layout.astro';
 import ProjectList from '../components/ProjectList/ProjectList';
 import AboutSection from '../components/AboutSection';
@@ -16,9 +20,18 @@ const projects = projectsData.map((project) => ({
 
 <Layout title="Areli Velazquez | UX/UI Designer">
     <main class="container mx-auto mt-56 px-5">
-        <p class="text-3xl lg:text-6xl lg:w-8/12 leading-normal mb-56">
+        <p class="text-3xl lg:text-6xl lg:w-8/12 leading-normal mb-12">
             Hi there! My name is Areli and I’m a UX&nbsp;/&nbsp;UI&nbsp;Designer
         </p>
+        <div class="flex flex-wrap mb-56 text-2xl gap-5">
+            <div><CgFigma /><span class="sr-only">Figma</span></div>
+            <div><FaSketch /><span class="sr-only">Sketch</span></div>
+            <div><SiAdobeillustrator /><span class="sr-only">Illustrator</span></div>
+            <div><SiAdobephotoshop /><span class="sr-only">Photoshop</span></div>
+            <div><SiAdobeindesign /><span class="sr-only">InDesign</span></div>
+            <div><SiShopify /><span class="sr-only">Shopify</span></div>
+            <div><FaWordpressSimple /><span class="sr-only">WordPress</span></div>
+        </div>
         <div id="portfolio"><ProjectList filters={projectFilters} projects={projects} client:visible /></div>
         <AboutSection client:load />
     </main>
