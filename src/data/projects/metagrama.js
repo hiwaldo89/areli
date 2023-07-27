@@ -13,8 +13,7 @@ export default {
             src: '/images/metagrama-01.jpg',
             alt: '',
         },
-        {
-        },
+        {},
         {
             type: 'image',
             src: '/images/metagrama-003.png',
@@ -27,8 +26,9 @@ export default {
         },
         {
             type: 'text-and-image',
-            title: 'Overview',
-            text: 'Brownie liquorice jelly-o topping sugar plum toffee topping chupa chups. Candy canes marzipan candy tart carrot cake powder sugar plum chocolate jelly beans',
+            title: 'Designing a website for Metagrama',
+            text: `Metagrama is an architectural studio based in Ciudad Juarez, Mexico. When Oscar, one of the founders, got in touch with me to design the studio's website, he immediatly transmitted passion for creating dissruptive design and spaces.
+            One of the major goals was to include an instant quote generator, as during the intervie process with past clients we found out that having an approximated price was a game changer, and Metagrama wanted to create a stress-free approach with their potential clients.`,
             image: {
                 src: '/images/metagrama-04.jpg',
                 alt: '',
@@ -36,8 +36,8 @@ export default {
         },
         {
             type: 'text-and-image',
-            title: 'Overview',
-            text: 'Brownie liquorice jelly-o topping sugar plum toffee topping chupa chups. Candy canes marzipan candy tart carrot cake powder sugar plum chocolate jelly beans',
+            title: '-',
+            text: `A design that faithfully reflected Megrama's brand identity couldn't exist in a static way, we wanted to bring to life some of the brand elements in a dynamic way. If you pay close attention to the website, you'll see that there are two layers moving at different paces as you scroll up and down. Simple animations as you hover over buttons or project images adds a pinch of movement that enhaces the joy of navigation through this website.`,
             image: {
                 src: '/images/metagrama-006.jpg',
                 alt: '',

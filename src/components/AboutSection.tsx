@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import React, { useRef } from 'react';
 import { useScroll, motion, useTransform } from 'framer-motion';
 import type { MotionValue } from 'framer-motion';
 
@@ -17,9 +17,10 @@ const AboutSection = () => {
                 <div className="md:w-5/12 mb-5 md:mb-0">
                     <h2 className="text-5xl mb-16">About me</h2>
                     <p>
-                        I'm a UX / UI Designer from Mexico, but relocated on July 2022 to San Jose, California.
-                        I have a Bachelor's Degree on Marketing and Communications and a passion for design, specially User Interfaces.
-                        Two of my favorite hobbies are to watch interior design Youtube videos and take long walks with my dog Uma. 
+                        I'm a UX / UI Designer from Mexico, who relocated on July 2022 to San Jose, California. I have a
+                        Bachelor's Degree on Marketing and Communications and a passion for design, specially for User
+                        Interfaces. Two of my favorite hobbies are to watch interior design Youtube videos and take long
+                        walks with my dog Uma.
                     </p>
                 </div>
                 <div className="w-7/12 md:w-3/12 mx-auto">
