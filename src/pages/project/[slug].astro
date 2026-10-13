@@ -2,6 +2,11 @@
 import Layout from '../../layouts/Layout.astro';
 import projects from '../../data/projects';
 
+type ProjectImage = {
+    src: string;
+    alt: string;
+};
+
 interface ITwoColText {
     type: 'two-col-text';
     columns: { title: string; content: string }[];
@@ -23,10 +28,13 @@ interface ITextAndImage {
     type: 'text-and-image';
     title: string;
     text: string;
-    image: {
-        src: string;
-        alt: string;
-    };
+    image: ProjectImage;
+}
+
+interface ITwoImages {
+    type: 'two-images';
+    leftImage: ProjectImage;
+    rightImage: ProjectImage;
 }
 
 interface IText {
@@ -38,7 +46,7 @@ export interface Props {
     title: string;
     categories: string[];
     website: string;
-    content: Array<ITwoColText | IImage | ITitleAndText | ITextAndImage | IText>;
+    content: Array<ITwoColText | IImage | ITitleAndText | ITextAndImage | ITwoImages | IText>;
 }
 
 export function getStaticPaths() {
@@ -51,38 +59,35 @@ export function getStaticPaths() {
     });
 }
 
-const { title, categories, website, content } = Astro.props;
+const { title, website, content } = Astro.props;
 ---
 
-<Layout title={`Areli Velazquez | ${title}`}>
-    <main class="mt-16 container mx-auto px-5">
-        <a href="/" class="text-gray block hover:opacity-30 transition ease-in-out duration-300"
-            >&lsaquo; Back to projects</a
-        >
+<Layout title={`Areli Velazquez | ${title}`} className="bg-yellow" page="project">
+    <main class="mt-16 max-w-7xl w-full mx-auto px-5">
+        <a href="/" class="block hover:text-green transition ease-in-out duration-300">&lsaquo; Back to projects</a>
         <div class="md:flex items-center mt-36 mb-8">
-            <h1 class="mb-5 md:mb-0 text-3xl md:text-5xl">{title}</h1>
-            <ul class="flex flex-wrap ml-auto">
-                {
-                    categories.map((category) => (
-                        <li class="mr-8 last:mr-0 rounded-full py-4 px-5 text-sm min-w-[80px] bg-yellow mb-5 md:mb-0">{category}</li>
-                    ))
-                }
-            </ul>
+            <h1 class="font-lora font-medium mb-5 md:mb-0 text-3xl md:text-5xl">{title}</h1>
         </div>
-        <a
-            href={website}
-            class="uppercase text-lg border-b border-b-gray mb-16 md:mb-56 inline-block hover:text-yellow transition duration-300 ease-in-out hover:border-b-yellow"
-            target="_blank">Visit website</a
-        >
+        {
+            !!website && (
+                <a
+                    href={website}
+                    class="font-mono uppercase text-lg mb-20 inline-block hover:text-green transition duration-300 ease-in-out hover:border-b-yellow"
+                    target="_blank"
+                >
+                    Visit website
+                </a>
+            )
+        }
         {
             content.map((section) => {
                 if (section.type === 'two-col-text') {
                     return (
-                        <section class="md:columns-2 gap-8 mb-24">
+                        <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
                             {section.columns.map((column) => (
                                 <div class="mb-5 md:mb-0">
-                                    <h2 class="text-4xl mb-4">{column.title}</h2>
-                                    <p class="text-xl">{column.content}</p>
+                                    <h2 class="font-lora text-4xl mb-4">{column.title}</h2>
+                                    <p class="text-lg" set:html={column.content} />
                                 </div>
                             ))}
                         </section>
@@ -101,10 +106,10 @@ const { title, categories, website, content } = Astro.props;
                     return (
                         <section class="flex mb-24">
                             <div class="lg:w-4/12">
-                                <h2 class="text-4xl">{section.title}</h2>
+                                <h2 class="font-lora text-4xl">{section.title}</h2>
                             </div>
                             <div class="lg:w-8/12">
-                                <p class="text-xl">{section.text}</p>
+                                <p class="text-lg">{section.text}</p>
                             </div>
                         </section>
                     );
@@ -114,11 +119,32 @@ const { title, categories, website, content } = Astro.props;
                     return (
                         <section class="md:flex mb-24 items-center gap-24">
                             <div class="w-full md:w-6/12 mb-5 md:mb-0">
-                                <h2 class="text-4xl mb-4">{section.title}</h2>
-                                <div set:html={section.text} />
+                                <h2 class="font-lora text-4xl mb-4">{section.title}</h2>
+                                <div class="text-lg" set:html={section.text} />
                             </div>
                             <div class="w-full md:w-6/12">
                                 <img src={section.image.src} alt={section.image.alt} class="max-w-full mx-auto" />
+                            </div>
+                        </section>
+                    );
+                }
+
+                if (section.type === 'two-images') {
+                    return (
+                        <section class="mb-24 flex flex-col md:flex-row gap-8 w-full">
+                            <div class="md:w-6/12">
+                                <img
+                                    src={section.leftImage.src}
+                                    alt={section.leftImage.alt}
+                                    class="max-w-full mx-auto"
+                                />
+                            </div>
+                            <div class="md:w-6/12">
+                                <img
+                                    src={section.rightImage.src}
+                                    alt={section.rightImage.alt}
+                                    class="max-w-full mx-auto"
+                                />
                             </div>
                         </section>
                     );
@@ -137,7 +163,12 @@ const { title, categories, website, content } = Astro.props;
 </Layout>
 
 <style>
+    .text-section {
+        font-size: 18px;
+    }
+
     .text-section :global(h2) {
-        font-size: theme(fontSize.4xl);
+        font-size: var(--text-4xl);
+        font-family: var(--font-lora);
     }
 </style>
