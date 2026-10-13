@@ -12,16 +12,16 @@ export interface Props {
 
 const ProjectCard = ({ url, title, img, category }: Props) => {
     return (
-        <a href={url} className="block w-full break-inside-avoid-column group border-b border-b-gray mb-16">
-            <div className="overflow-hidden mb-10">
+        <a href={url} className="block w-full break-inside-avoid-column group mb-16">
+            <div className="overflow-hidden mb-4">
                 <img
                     src={img.src}
                     alt={img.alt}
                     className="max-w-full group-hover:scale-125 transition ease-in-out duration-500"
                 />
             </div>
-            <h2 className="text-xl font-medium mb-4">{title}</h2>
-            <span className={classNames('uppercase block group-hover:text-yellow transition mb-8')}>{category}</span>
+            <span className={classNames('font-mono uppercase block group-hover:text-green transition mb-2 text-sm')}>{category}</span>
+            <h2 className="font-lora text-xl font-medium mb-4">{title}</h2>
         </a>
     );
 };

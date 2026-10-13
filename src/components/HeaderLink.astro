@@ -2,16 +2,23 @@
 import classnames from 'classnames';
 
 export interface Props {
-	href: string;
-	text: string;
-	isActive: boolean;
+    href: string;
+    text: string;
+    isActive: boolean;
+    target?: string;
+    page: string;
 }
 
-const { href, text, isActive } = Astro.props
+const { href, text, isActive, target, page } = Astro.props;
+const hoverClass = page === 'home' ? 'hover:text-yellow' : 'hover:text-green';
 ---
 
-<li class={classnames("ml-10 first:ml-0 hover:text-yellow transition ease-in-out duration-300", {"text-yellow": isActive})}>
-	<a href={href} class={classnames("uppercase", {"font-bold": isActive, "font-medium": !isActive})}>
-		{text}
-	</a>
+<li
+    class={classnames('ml-10 first:ml-0 transition ease-in-out duration-300', hoverClass, {
+        'text-yellow': isActive,
+    })}
+>
+    <a href={href} class={classnames('uppercase', { 'font-bold': isActive, 'font-medium': !isActive })} target={target}>
+        {text}
+    </a>
 </li>
