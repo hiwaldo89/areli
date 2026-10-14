@@ -4,7 +4,7 @@ export default {
     categories: ['Web Design'],
     website: 'https://metagrama.mx/es/',
     cover: {
-        src: '/images/metagrama-06.jpg',
+        src: '/images/metagramacover.jpg',
         alt: '',
     },
     content: [

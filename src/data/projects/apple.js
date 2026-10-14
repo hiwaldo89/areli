@@ -3,7 +3,7 @@ export default {
     title: 'Designing clarity at Apple',
     categories: ['UX/UI Design'],
     cover: {
-        src: '/images/Mockupapple.jpg',
+        src: '/images/appleproject.jpg',
         alt: '',
     },
     content: [
@@ -64,7 +64,7 @@ export default {
         },
         {
             type: 'image',
-            src: '/images/Mockupapple.jpg',
+            src: '/images/appleproject.jpg',
             alt: '',
         },
         //{ type: 'two-images', leftImage: { src: '/images/', alt: '' }, rightImage: { src: '/images/', alt: '' } },
