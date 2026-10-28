@@ -14,11 +14,15 @@ const hoverClass = page === 'home' ? 'hover:text-yellow' : 'hover:text-green';
 ---
 
 <li
-    class={classnames('ml-10 first:ml-0 transition ease-in-out duration-300', hoverClass, {
-        'text-yellow': isActive,
-    })}
+    class:list={[
+        'ml-10 first:ml-0 transition ease-in-out duration-300',
+        hoverClass,
+        {
+            'text-yellow': isActive,
+        },
+    ]}
 >
-    <a href={href} class={classnames('uppercase')} target={target}>
+    <a href={href} class={'uppercase'} target={target}>
         {text}
     </a>
 </li>

@@ -65,7 +65,7 @@ export default {
             type: 'text',
             content: `<h2>A strong creative idea needs an equally compelling story to help others understand its value and see its potential.</h2><br/>
             <p>
-            The result was a collective editorial concept presented to TOUS leadership, with a proposal for future editions and circulation. My contribution connected interviews and photographic storytelling with the narrative that brought the project together—reinforcing my belief that how we communicate creative work is part of the work itself.
+            The result was a collective editorial concept presented to Tous leadership, with a proposal for future editions and circulation. My contribution connected interviews and photographic storytelling with the narrative that brought the project together—reinforcing my belief that how we communicate creative work is part of the work itself.
             </p>
             `,
         },
