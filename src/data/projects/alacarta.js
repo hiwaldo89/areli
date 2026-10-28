@@ -20,7 +20,7 @@ export default {
             type: 'text',
             content: `<h2>Giving Tous an editorial voice</h2><br />
             <p>
-            Jewelry gains meaning through the people, rituals, and memories surrounding it. A la Carta creates a space for TOUS to explore those connections, expressing its heritage and creative spirit through culture.
+            Jewelry gains meaning through the people, rituals, and memories surrounding it. A la Carta creates a space for Tous to explore those connections, expressing its heritage and creative spirit through culture.
             <br/><br/>
             Conceived as a menu, the publication invites readers to discover stories across successive courses. This structure gives different voices and formats a shared rhythm, connecting the gastronomic theme with the reading experience.
             <br/><br/>

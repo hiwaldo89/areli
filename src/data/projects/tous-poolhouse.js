@@ -70,7 +70,7 @@ export default {
             The Tous Style Squad encourages experimentation through styling conversations and playful product presentations. Hold explores multiple ways to wear a piece, a Piercing Masterclass supports personal compositions, and a gemstone quiz connects the physical experience with online discovery.
             <br/>
             <br/>
-            Regional ingredients, Oaxacan gastronomy, local craftsmanship, and Mexican musical talent give the first edition cultural specificity. These elements connect the TOUS universe with its host location and give visitors something distinctive to discover.
+            Regional ingredients, Oaxacan gastronomy, local craftsmanship, and Mexican musical talent give the first edition cultural specificity. These elements connect the Tous universe with its host location and give visitors something distinctive to discover.
             <br/>
             <br/>
             Proposed editions in Colombia, Spain, and Japan build on a shared foundation: summer, joy, self-expression, and recognizable brand codes. Local materials, flavors, collaborations, and programming can evolve within that framework, giving each edition its own character.
