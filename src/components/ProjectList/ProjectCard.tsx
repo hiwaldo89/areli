@@ -21,7 +21,7 @@ const ProjectCard = ({ url, title, img, category }: Props) => {
                 />
             </div>
             <span className={classNames('font-mono uppercase block group-hover:text-green transition mb-2 text-sm')}>{category}</span>
-            <h2 className="font-lora text-xl font-medium mb-4">{title}</h2>
+            <h2 className="font-michroma text-xl font-medium mb-4">{title}</h2>
         </a>
     );
 };

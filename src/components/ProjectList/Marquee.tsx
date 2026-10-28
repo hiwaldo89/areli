@@ -10,7 +10,7 @@ const Marquee = ({ words }: Props) => {
 
     return (
         <div className="relative w-full overflow-x-hidden py-[110px] select-none">
-            <div className="flex whitespace-nowrap uppercase font-lora text-2xl lg:text-4xl tracking-widest text-brown">
+            <div className="flex whitespace-nowrap uppercase font-michroma text-2xl lg:text-4xl tracking-widest text-brown">
                 <div className="animate-marquee flex shrink-0 items-center justify-around min-w-full gap-6 pr-6">
                     {repeatedWords.map((text) => (
                         <>

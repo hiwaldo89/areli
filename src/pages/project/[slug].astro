@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import projects from '../../data/projects';
+import Slider from '../../components/Slider';
 
 type ProjectImage = {
     src: string;
@@ -42,11 +43,16 @@ interface IText {
     content: string;
 }
 
+interface ISlider {
+    type: 'slider';
+    images: string[];
+}
+
 export interface Props {
     title: string;
     categories: string[];
     website: string;
-    content: Array<ITwoColText | IImage | ITitleAndText | ITextAndImage | ITwoImages | IText>;
+    content: Array<ITwoColText | IImage | ITitleAndText | ITextAndImage | ITwoImages | IText | ISlider>;
 }
 
 export function getStaticPaths() {
@@ -66,7 +72,7 @@ const { title, website, content } = Astro.props;
     <main class="mt-16 max-w-7xl w-full mx-auto px-5">
         <a href="/" class="block hover:text-green transition ease-in-out duration-300">&lsaquo; Back to projects</a>
         <div class="md:flex items-center mt-36 mb-8">
-            <h1 class="font-lora font-medium mb-5 md:mb-0 text-3xl md:text-5xl">{title}</h1>
+            <h1 class="font-michroma font-medium mb-5 md:mb-0 text-3xl md:text-5xl">{title}</h1>
         </div>
         {
             !!website && (
@@ -86,7 +92,7 @@ const { title, website, content } = Astro.props;
                         <section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
                             {section.columns.map((column) => (
                                 <div class="mb-5 md:mb-0">
-                                    <h2 class="font-lora text-4xl mb-4">{column.title}</h2>
+                                    <h2 class="font-michroma text-4xl mb-4" set:html={column.title} />
                                     <p class="text-lg" set:html={column.content} />
                                 </div>
                             ))}
@@ -106,7 +112,7 @@ const { title, website, content } = Astro.props;
                     return (
                         <section class="flex mb-24">
                             <div class="lg:w-4/12">
-                                <h2 class="font-lora text-4xl">{section.title}</h2>
+                                <h2 class="font-michroma text-4xl">{section.title}</h2>
                             </div>
                             <div class="lg:w-8/12">
                                 <p class="text-lg">{section.text}</p>
@@ -119,7 +125,7 @@ const { title, website, content } = Astro.props;
                     return (
                         <section class="md:flex mb-24 items-center gap-24">
                             <div class="w-full md:w-6/12 mb-5 md:mb-0">
-                                <h2 class="font-lora text-4xl mb-4">{section.title}</h2>
+                                <h2 class="font-michroma text-4xl mb-4">{section.title}</h2>
                                 <div class="text-lg" set:html={section.text} />
                             </div>
                             <div class="w-full md:w-6/12">
@@ -157,6 +163,14 @@ const { title, website, content } = Astro.props;
                         </section>
                     );
                 }
+
+                if (section.type === 'slider') {
+                    return (
+                        <section class="mb-24">
+                            <Slider images={section.images} client:visible />
+                        </section>
+                    );
+                }
             })
         }
     </main>
@@ -169,6 +183,6 @@ const { title, website, content } = Astro.props;
 
     .text-section :global(h2) {
         font-size: var(--text-4xl);
-        font-family: var(--font-lora);
+        font-family: var(--font-michroma);
     }
 </style>

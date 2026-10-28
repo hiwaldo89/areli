@@ -18,7 +18,7 @@ const hoverClass = page === 'home' ? 'hover:text-yellow' : 'hover:text-green';
         'text-yellow': isActive,
     })}
 >
-    <a href={href} class={classnames('uppercase', { 'font-bold': isActive, 'font-medium': !isActive })} target={target}>
+    <a href={href} class={classnames('uppercase')} target={target}>
         {text}
     </a>
 </li>

@@ -58,7 +58,7 @@ export default {
             It shaped a mindset I now bring to every project: organize the information, identify patterns, explore the variables, and anticipate where people might need support. Then use that understanding to decide what deserves emphasis and what can be simplified.<br/><br/>
             That thinking gives the visual work its purpose. I want an experience to feel considered and enjoyable, with enough clarity that the interface becomes almost invisible to the person using it.<br/><br/>
             The most lasting lesson was the responsibility behind simplicity. An experience that feels effortless often depends on carefully resolving a great deal of complexity.<br/><br/>
-            <em>I worked at Apple for three years as a UX/UI designer through contracting partners. This reflection describes my approach and responsibilities in general terms. Project details and visuals remain confidential.</em>
+            <em>*I worked at Apple for three years as a UX/UI designer. This reflection describes my approach and responsibilities in general terms. Project details and visuals remain confidential.</em>
             </p>
             `,
         },
